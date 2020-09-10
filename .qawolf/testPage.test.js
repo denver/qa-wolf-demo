@@ -17,10 +17,9 @@ afterAll(async () => {
 
 test("testPage", async () => {
   await page.goto("localhost:3000");
-  await page.click('text="Test Page"');
-  await page.click("text=Home");
-  await page.click('text="Test Page"');
-  await page.click("text=Home");
-  await page.click('text="Test Page"');
-  await page.click("text=Home");
+  await page.click('[data-test-id="test-page-link"]');
+  const title = await page.title();
+  expect(title).toBe("Test Page");
+  const content = await page.textContent('[data-test-id="test-page-title"]');
+  expect(content).toBe("Test Page")
 });

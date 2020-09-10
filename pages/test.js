@@ -5,7 +5,7 @@ export default function Test() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Test Page</title>
+        <title data-test-id="test-page-title">Test Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -19,9 +19,9 @@ export default function Test() {
         </p>
 
         <div className={styles.grid}>
-          <a href="/" className={styles.card}>
+          <a data-test-id="home-button" href="/" className={styles.card}>
             <h3>Home &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <p>Navigate back to the QA Wolf Demo Home</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>

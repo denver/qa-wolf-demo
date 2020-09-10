@@ -15,7 +15,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          <code className={styles.code}><a href="/test">Test Page</a></code>
+          <code className={styles.code}><a data-test-id="test-page-link" href="/test">Test Page</a></code>
         </p>
 
         <div className={styles.grid}>
