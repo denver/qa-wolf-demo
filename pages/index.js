@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://qawolf.com">QA Wolf!</a>
+          Welcome to <a data-test-id="qa-wolf-link" class="Blue" href="https://qawolf.com">QA Wolf!</a>
         </h1>
 
         <p className={styles.description}>
