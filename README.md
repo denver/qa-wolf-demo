@@ -1,30 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# QA Wolf Demo
+
+This is a demo and online tutorial on how to use [QA Wolf](https://qawolf.com), a new test automation framework built on the [Playwright](https://playwright.dev/) API.
+
+We're going to create a Next.js app using [Vercel](https://vercel.com/download), add QA Wolf and then run the QA Wolf tests in CI using Github Actions.
+
+This project assumes some knowledge of the command line and a Github account (though is not required for all sections).
 
 ## Getting Started
 
-First, run the development server:
+1. Install [vercel cli](https://vercel.com/download) - `npm i -g vercel`
+2. vercel init nextjs [test-project-name]
+![](vercel-init-nextjs.gif)
+3. cd [test-project-name]
+4. npm install
+5. npm run dev
+6. npm init qawolf
+7. npx qawolf create http://localhost:3000 firstTest
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## QA Wolf
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This repo uses [QA Wolf](https://docs.qawolf.com/docs/what_is_qa_wolf) for e2e testing.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+`npx qawolf test`
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The repo uses Github actions to run the e2e tests on every build.
