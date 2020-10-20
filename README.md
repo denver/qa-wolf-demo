@@ -1,5 +1,7 @@
 # QA Wolf Demo
 
+[YouTube Tutorial](https://youtu.be/BRxVu0De-4k)
+
 This is a demo and online tutorial on how to use [QA Wolf](https://qawolf.com), a new test automation framework built on the [Playwright](https://playwright.dev/) API.
 
 We're going to create a Next.js app using [Vercel](https://vercel.com/download), add QA Wolf and then run the QA Wolf tests in CI using Github Actions.
